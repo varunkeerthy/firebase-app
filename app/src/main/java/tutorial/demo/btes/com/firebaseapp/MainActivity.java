@@ -22,30 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("message");
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                TextView textView = (TextView) findViewById(R.id.textView);
-                textView.setText(value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
     }
 
     protected void buttonClicked(View view) {
 
         EditText editText = (EditText) findViewById(R.id.message);
-        String incomingMessage = editText.getText().toString();
+        myRef = database.getReference("Users");
+        myRef.child("Names").push().setValue(editText.getText().toString());
 
-        myRef.setValue(incomingMessage);
     }
 }
