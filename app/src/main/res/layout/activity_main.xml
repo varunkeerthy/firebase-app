@@ -10,8 +10,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter message here"
-        android:id="@+id/message"/>
+        android:text="Your name..."
+        android:id="@+id/name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your contact number.."
+        android:id="@+id/contact"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

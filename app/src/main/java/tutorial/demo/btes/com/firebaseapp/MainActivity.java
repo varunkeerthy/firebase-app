@@ -26,9 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
     protected void buttonClicked(View view) {
 
-        EditText editText = (EditText) findViewById(R.id.message);
-        myRef = database.getReference("Users");
-        myRef.child("Names").push().setValue(editText.getText().toString());
+        EditText name = (EditText) findViewById(R.id.name);
+        EditText contact = (EditText) findViewById(R.id.contact);
+        String childRecordName = name.getText().toString();
+        myRef = database.getReference("users").child(childRecordName);
+
+        myRef.child("name").setValue(childRecordName);
+        myRef.child("contact").setValue(contact.getText().toString());
+
 
     }
 }
