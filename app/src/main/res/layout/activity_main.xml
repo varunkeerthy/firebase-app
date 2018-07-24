@@ -10,25 +10,22 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your name..."
-        android:id="@+id/name"/>
+        android:id="@+id/userEmail"
+        android:hint="Enter email address" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your contact number.."
-        android:id="@+id/contact"/>
+        android:id="@+id/userPassword"
+        android:hint="Enter password" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cick to send"
         android:id="@+id/button"
-        android:onClick="buttonClicked"
+        android:text="Send"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Incoming message"
-        android:id="@+id/textView"/>
+
 
 </LinearLayout>
